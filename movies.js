@@ -17,19 +17,16 @@ class Movie {
     this.#description = description
     this.#rating = rating
   }
-  updateRating(newRating){
+   displayInfo(){
+   document.getElementById("movie-info").innerHTML = `Title of Movie: ${this.#title}<br> Cast Members: ${this.#cast}<br> Description of the movie: ${this.#description}<br> rating: ${this.#rating}`
+    }
+
+  updateRating(newRating) {
     this.#rating = newRating
     this.displayInfo()
   }
-  displayInfo(){
-    console.log(this.#description)
-    document.getElementById("movie-info").innerHTML = `Title of Movie: ${this.#title}<br> Cast Members: ${this.#cast}<br> Description of the movie: ${this.#description}<br> rating: ${this.#rating}`
-  }
 }
-//   #title
-  // #cast
-  // #description
-  // #rating
+
 
 // Test your implementation
 
@@ -45,4 +42,14 @@ displaymovie.updateRating(11)
 
 // Display the updated information of the movie
 
-//"Venom",["Tom Hardy","Riz Ahmed","Scott Haze"],"Black symbiote combines with Journalist to create havoc and chaos when it lands on Earth",10
+let newmovie = new Movie("Toy Story",["Wallace Shawn","Tim allen","Toys are sentient and are trying to gain freedom", 9])
+newmovie.displayInfo()
+let movies = [displaymovie, newmovie]
+
+
+updateMovieRating(title, newRating); {
+  Movie.title = this.title
+  Movie.rating = this.rating
+}
+
+updateMovieRating("Venom 2", 12)
