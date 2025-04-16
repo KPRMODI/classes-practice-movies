@@ -5,10 +5,10 @@
   // Method to update the rating of the movie
 
   // Method to display the movie's information
-
+  
 class Movie {
-  #title
-  #cast
+  #title;
+  #cast;
   #description
   #rating
   contructor(title, cast, description, rating){
@@ -19,7 +19,7 @@ class Movie {
   }
    displayInfo(){
    document.getElementById("movie-info").innerHTML = `Title of Movie: ${this.#title}<br> Cast Members: ${this.#cast}<br> Description of the movie: ${this.#description}<br> rating: ${this.#rating}`
-    }
+  }
 
   updateRating(newRating) {
     this.#rating = newRating
